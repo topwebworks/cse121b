@@ -98,14 +98,14 @@ function output(temples) {
 // Step 3: Create another function called getTemples. Make it an async function.
 async function getTemples() {
   // Step 4: In the function, using the built-in fetch method, call this absolute URL: 'https://byui-cse.github.io/cse121b-course/week05/temples.json'. Create a variable to hold the response from your fetch. You should have the program wait on this line until it finishes.
-  fetch('https://byui-cse.github.io/cse121b-course/week05/temples.json')
-    // Step 5: Convert your fetch response into a Javascript object ( hint: .json() ). Store this in the templeList variable you declared earlier (Step 1). Make sure the the execution of the code waits here as well until it finishes.
-    .then((response) => response.json())
-    .then((data) => {
-      templeList = data;
-      // Step 6: Finally, call the output function and pass it the list of temples. Execute your getTemples function to make sure it works correctly.
-      output(templeList);
-    });
+  let response = await fetch(
+    'https://byui-cse.github.io/cse121b-course/week05/temples.json'
+  );
+  // Step 5: Convert your fetch response into a Javascript object ( hint: .json() ). Store this in the templeList variable you declared earlier (Step 1). Make sure the the execution of the code waits here as well until it finishes.
+  let data = await response.json();
+  templeList = data;
+  // Step 6: Finally, call the output function and pass it the list of temples. Execute your getTemples function to make sure it works correctly.
+  output(templeList);
 }
 getTemples();
 
@@ -153,3 +153,5 @@ sortByElement.addEventListener('change', sortBy);
 
 // Add a "Filter by" feature that allows users to filter the list of temples
 // This will require changes to both the HTML and the JavaScript files
+
+// ---I added a filter in my student project - next, so not going to do it here.---

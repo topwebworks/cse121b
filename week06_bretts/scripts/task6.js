@@ -90,7 +90,7 @@ function jokeTotals(jokeListUsed) {
   return (totalJokesElement.textContent = totalJokes);
 }
 
-// Reset joke list html
+// Reset joke list html. Called by jokeType filter function
 function reset() {
   let jokesElement = document.getElementById('jokes');
   jokesElement.innerHTML = '';
