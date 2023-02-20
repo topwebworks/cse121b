@@ -19,7 +19,7 @@ Description of Project - to take about 3 hours.
 
 Addressing Project Requirements
 
-Describe how this project will make use of the required elements—especially the requirement for use of fetch, objects, modules, or array functions.
+Describe how this project will make use of the required elements.
 
 FETCH
 Fetch joke data from jokes JSON file. Use async and await.
@@ -31,7 +31,7 @@ ARRAY
 forEach - joke list, default or filtered, will generate a random array of joke objects 
 
 FILTER
-filter - dropdown with an event listener. The selected filter will show a randomized joke list of only the selected joke type.
+filter - The selected filter will show a randomized joke list of only the selected joke type.
 
 SORT
 Each joke list will randomly sort the data so each list is shown in a random order.
@@ -41,7 +41,7 @@ Create html elements for each joke in the jokeList object array. H2, H4, H5, Art
 
 CONDITIONALS
 If/Else - for dropdown joke type filter
-Case - to find current day message for joke page title.
+Switch - to find current day message for joke page title.
 
 FUNCTIONS
 output() - Create html elements for each joke in the all jokes or filtered jokes object array
