@@ -1,0 +1,53 @@
+CSE 121B W05 Project Idea - Brett Snyder
+
+Description of Project - to take about 3 hours. 
+
+** Random Jokes **
+
+1. The user will be shown a random list of jokes either a default list of all or by filtered joke types.
+
+2. The user can filter a random joke type by selecting:
+- All Jokes
+- General Jokes
+- Programming Jokes
+- Knock-Knock Jokes
+
+3. The page will show the current day and the total jokes of each joke list.
+"MONDAY'S 300 RANDOM JOKES!"
+
+---------------------
+
+Addressing Project Requirements
+
+Describe how this project will make use of the required elements—especially the requirement for use of fetch, objects, modules, or array functions.
+
+FETCH
+Fetch joke data from jokes JSON file. Use async and await.
+
+OBJECTS
+Create joke array of objects from json file
+
+ARRAY
+forEach - joke list, default or filtered, will generate a random array of joke objects 
+
+FILTER
+filter - dropdown with an event listener. The selected filter will show a randomized joke list of only the selected joke type.
+
+SORT
+Each joke list will randomly sort the data so each list is shown in a random order.
+
+DOM
+Create html elements for each joke in the jokeList object array. H2, H4, H5, Article. Place in joke totals and current day. Event listener for filtered dropdown list.
+
+CONDITIONALS
+If/Else - for dropdown joke type filter
+Case - to find current day message for joke page title.
+
+FUNCTIONS
+output() - Create html elements for each joke in the all jokes or filtered jokes object array
+getJokes() - Fetch and output all jokes from the jokes.json file. Call joke totals
+jokeType() - Reset and filter the jokes by type. Output selected list. Call joke list totals
+jokeTotals() - Get joke totals used from each joke type
+reset() - Reset joke list html. Called by jokeType filter function
+
+

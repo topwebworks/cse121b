@@ -37,7 +37,7 @@ messageElement.textContent = message;
 // Global empty array variable to store a list of jokes
 let jokeList = [];
 
-// Create html elements for each joke in the jokeList array
+// Create html elements for each joke in the jokeList object array
 function output(jokes) {
   jokes.forEach((joke) => {
     let article = document.createElement('article');
@@ -62,6 +62,8 @@ async function getJokes() {
   jokeList = data;
   jokeList.sort(() => Math.random() - 0.5);
   jokeTotals(jokeList);
+  // Test array of objects in console
+  // console.log(jokeList);
   output(jokeList);
 }
 
