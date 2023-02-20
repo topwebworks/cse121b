@@ -154,4 +154,4 @@ sortByElement.addEventListener('change', sortBy);
 // Add a "Filter by" feature that allows users to filter the list of temples
 // This will require changes to both the HTML and the JavaScript files
 
-// ---I will add a filter in my student project - next, so not going to do it here.---
+// ---I will add a filter in my student project next, so not going to do it here.---
