@@ -1,0 +1,22 @@
+
+My Five Coding Resources Recommendation
+Brett Snyder
+CSE 121B > W07: Reflection
+
+All five sites in my list below are my favorite, and have a large community of users. MDN and W3Schools are long-standing resources with a reputation for being reliable and comprehensive. The Modern JavaScript Tutorial is a newer site that has gained popularity due to its focus on modern JavaScript features. Codecademy and freeCodeCamp are popular platforms for students who want a project-based approach to learning, as well as the opportunity to get help and feedback from a large community of users.
+
+MDN Web Docs - https://developer.mozilla.org/en-US/
+MDN Web Docs is an excellent resource for JavaScript students who are looking for in-depth and detailed info on various JavaScript topics. MDN offers a comprehensive and authoritative reference guide to JavaScript, covering all aspects of the language, from basic to advanced topics. It's a popular website with a large and active community, and it allows users to contribute and suggest edits to the documentation. This site is my "official" coding resource recommendation versus StackOverflow - which can be hit or miss.
+
+W3Schools - https://www.w3schools.com/jsref/default.asp
+W3Schools is a popular choice for beginners who want to learn JavaScript, and it offers a variety of interactive and easy-to-follow tutorials. The site has a user-friendly interface, and the interactive exercises help students practice their coding skills. W3Schools also provides a reference guide with examples of various JavaScript functions and methods. The site is widely popular and has a large and active community. This is usually the first place I look.
+
+The Modern JavaScript Tutorial - https://javascript.info/
+The Modern JavaScript Tutorial is a unique resource that focuses on modern JavaScript features, such as modules, async/await, and other advanced topics. The tutorial is well-organized and easy to navigate, and it offers interactive examples and exercises. The site has a modern design  that I personally like, and is up-to-date with the latest JavaScript specs. The tutorial is popular among intermediate-level students and developers - so stays current and easy to find what I am looking for.
+
+Codecademy - https://www.codecademy.com/
+Codecademy is "THE" first place people think of for online learning platform that offers a variety of courses in web development, including JavaScript. The site provides interactive coding exercises and projects that allow students to practice their skills. Codecademy also offers a community forum where students can get help and feedback from other users. The platform is popular among beginners and intermediate students and is known for its project-based approach to learning. I used this site more than Udemy.
+
+freeCodeCamp - https://www.freecodecamp.org/
+freeCodeCamp is a well-known nonprofit organization that provides a variety of free coding tutorials, including JavaScript. The site offers well thoughtout interactive coding exercises and projects that help students practice their skills. What sets freeCodeCamp apart is its emphasis on coding projects for nonprofits, which allow students to use their skills for a good cause. The platform is widely popular and has a large community of students and mentors who provide help and feedback. I use this the site least of the five sites, but still a great resource.
+
