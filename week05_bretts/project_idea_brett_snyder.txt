@@ -12,8 +12,8 @@ Description of Project - to take about 3 hours.
 - Programming Jokes
 - Knock-Knock Jokes
 
-3. The page will show the current day and the total jokes of each joke list.
-"MONDAY'S 300 RANDOM JOKES!"
+3. The page will show the total jokes of each joke list with a random adjective.
+"300 {adjective} RANDOM JOKES!"
 
 ---------------------
 
@@ -41,13 +41,12 @@ Create html elements for each joke in the jokeList object array. H2, H4, H5, Art
 
 CONDITIONALS
 If/Else - for dropdown joke type filter
-Switch - to find current day message for joke page title.
 
 FUNCTIONS
 output() - Create html elements for each joke in the all jokes or filtered jokes object array
 getJokes() - Fetch and output all jokes from the jokes.json file. Call joke totals
 jokeType() - Reset and filter the jokes by type. Output selected list. Call joke list totals
-jokeTotals() - Get joke totals used from each joke type
+jokeTotals() - Get joke totals and selected value condition from jokeType function.
 reset() - Reset joke list html. Called by jokeType filter function
 
 

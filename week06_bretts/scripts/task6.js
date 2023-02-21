@@ -1,36 +1,66 @@
 /* Lesson 6 - Student Program Random Jokes - Brett Snyder */
 
-// Get the day of the week from the current date
-let today = new Date();
-let dayOfWeek = today.getDay();
+// add an array of adjectives to the message variable
+let adjective = [
+  'Absurd',
+  'Bizarre',
+  'Cheeky',
+  'Clumsy',
+  'Corny',
+  'Crazy',
+  'Daffy',
+  'Dippy',
+  'Dizzy',
+  'Dopey',
+  'Foolish',
+  'Frivolous',
+  'Goofy',
+  'Hilarious',
+  'Inane',
+  'Insane',
+  'Kooky',
+  'Loony',
+  'Ludicrous',
+  'Mad',
+  'Nonsensical',
+  'Nutty',
+  'Odd',
+  'Offbeat',
+  'Outlandish',
+  'Quirky',
+  'Ridiculous',
+  'Silly',
+  'Surreal',
+  'Unusual',
+  'Wacky',
+  'Weird',
+  'Whimsical',
+  'Zany',
+  'Amusing',
+  'Batty',
+  'Boisterous',
+  'Charming',
+  'Comical',
+  'Curious',
+  'Daft',
+  'Droll',
+  'Eccentric',
+  'Entertaining',
+  'Flaky',
+  'Freaky',
+  'Funky',
+  'Giddy',
+  'Grinning',
+  'Hysterical',
+  'Jocular',
+  'Jolly',
+];
 
-// Add day of the week to the message variable
-let message = '';
-switch (dayOfWeek) {
-  case 0:
-    message = 'Sunday';
-    break;
-  case 1:
-    message = 'Monday';
-    break;
-  case 2:
-    message = 'Tuesday';
-    break;
-  case 3:
-    message = 'Wednesday';
-    break;
-  case 4:
-    message = 'Thursday';
-    break;
-  case 5:
-    message = 'Friday';
-    break;
-  case 6:
-    message = 'Saturday';
-    break;
-}
+// Randomly select an adjective and show it in the message variable
+let randomAdjective = adjective[Math.floor(Math.random() * adjective.length)];
+message = randomAdjective;
 
-// Assign the value of the second message variable to the HTML element with an ID of message
+// Show the message in the html element with an ID of message
 let messageElement = document.getElementById('message');
 messageElement.textContent = message;
 
@@ -72,24 +102,28 @@ function jokeType() {
   reset();
   let jokeTypeElement = document.getElementById('jokeType');
   let selectedValue = jokeTypeElement.value;
-  if (selectedValue === 'all') {
-    jokeTotals(jokeList);
+  if (selectedValue === 'random') {
+    jokeTotals(jokeList, selectedValue);
     output(jokeList);
   } else {
     let filteredJokes = jokeList.filter((joke) => {
       return joke.type === selectedValue;
     });
     filteredJokes.sort(() => Math.random() - 0.5);
-    jokeTotals(filteredJokes);
+    jokeTotals(filteredJokes, selectedValue);
     output(filteredJokes);
   }
 }
 
-//  Get joke totals used from each joke type
-function jokeTotals(jokeListUsed) {
+//  Get joke totals and selected value condition from jokeType function.
+function jokeTotals(jokeListUsed, selectedValue) {
   totalJokes = jokeListUsed.length;
   let totalJokesElement = document.getElementById('totalJokes');
-  return (totalJokesElement.textContent = totalJokes);
+  totalJokesElement.textContent = totalJokes;
+  if (selectedValue) {
+    let selectedJokeTypeElement = document.getElementById('selectedJokeType');
+    selectedJokeTypeElement.textContent = selectedValue;
+  }
 }
 
 // Reset joke list html. Called by jokeType filter function
@@ -101,6 +135,10 @@ function reset() {
 // jokeType event listener that calls the jokeType function
 let jokeTypeElement = document.getElementById('jokeType');
 jokeTypeElement.addEventListener('change', jokeType);
+
+// default jokeType value is random
+let selectedJokeTypeElement = document.getElementById('selectedJokeType');
+selectedJokeTypeElement.textContent = 'random';
 
 // Call the getJokes function to start the fun
 getJokes();
