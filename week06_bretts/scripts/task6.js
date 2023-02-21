@@ -67,7 +67,7 @@ async function getJokes() {
   output(jokeList);
 }
 
-// Reset and filter the jokes by type. Output selected list. Call joke list totals
+// Reset and filter the jokes by type. Call joke list totals. Output selected list.
 function jokeType() {
   reset();
   let jokeTypeElement = document.getElementById('jokeType');
