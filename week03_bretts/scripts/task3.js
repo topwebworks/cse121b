@@ -19,8 +19,8 @@ function addNumbers() {
 let sum = document.getElementById('sum');
 
 // Step 5: Add a "click" event listener to the HTML button with an ID of addNumbers that calls the addNumbers function
-let addNumbersButton = document.getElementById('addNumbers');
-addNumbersButton.addEventListener('click', function () {
+let addNumbersBtn = document.getElementById('addNumbers');
+addNumbersBtn.addEventListener('click', function () {
   sum.value = addNumbers();
 });
 
@@ -37,8 +37,8 @@ let subtractNumbers = function () {
 
 let difference = document.getElementById('difference');
 
-let subtractNumbersButton = document.getElementById('subtractNumbers');
-subtractNumbersButton.addEventListener('click', function () {
+let subtractNumbersBtn = document.getElementById('subtractNumbers');
+subtractNumbersBtn.addEventListener('click', function () {
   difference.value = subtractNumbers();
 });
 
@@ -53,8 +53,8 @@ let multiplyNumbers = () => {
 
 let product = document.getElementById('product');
 
-let multiplyNumbersButton = document.getElementById('multiplyNumbers');
-multiplyNumbersButton.addEventListener('click', function () {
+let multiplyNumbersBtn = document.getElementById('multiplyNumbers');
+multiplyNumbersBtn.addEventListener('click', function () {
   product.value = multiplyNumbers();
 });
 
@@ -71,8 +71,8 @@ function divideNumbers() {
 
 let quotient = document.getElementById('quotient');
 
-let divideNumbersButton = document.getElementById('divideNumbers');
-divideNumbersButton.addEventListener('click', function () {
+let divideNumbersBtn = document.getElementById('divideNumbers');
+divideNumbersBtn.addEventListener('click', function () {
   quotient.value = divideNumbers();
 });
 

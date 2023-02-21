@@ -10,57 +10,57 @@ let today = new Date();
 let dayOfWeek = today.getDay();
 
 // Step 4: Declare a variable to hold a message that will be displayed
-let message1 = '';
+let message_1 = '';
 
 // Step 5: Using an if statement, if the day of the week is a weekday (i.e. Monday - Friday), set the message variable to the string 'Hang in there!'
 if (dayOfWeek >= 1 && dayOfWeek <= 5) {
-  message1 = 'Hang in there!';
+  message_1 = 'Hang in there!';
 }
 
 // Step 6: Using an else statement, set the message variable to 'Woohoo!  It is the weekend!'
 else {
-  message1 = 'Woohoo!  It is the weekend!';
+  message_1 = 'Woohoo!  It is the weekend!';
 }
 
 /* SWITCH, CASE, BREAK */
 
 // Step 1: Declare a new variable to hold another message
-let message2 = '';
+let message_2 = '';
 
 // Step 2: Use switch, case and break to set the message variable to the day of the week as a string (e.g. Sunday, Monday, etc.) using the day of week variable declared in Step 2 above
 switch (dayOfWeek) {
   case 0:
-    message2 = 'Sunday';
+    message_2 = 'Sunday';
     break;
   case 1:
-    message2 = 'Monday';
+    message_2 = 'Monday';
     break;
   case 2:
-    message2 = 'Tuesday';
+    message_2 = 'Tuesday';
     break;
   case 3:
-    message2 = 'Wednesday';
+    message_2 = 'Wednesday';
     break;
   case 4:
-    message2 = 'Thursday';
+    message_2 = 'Thursday';
     break;
   case 5:
-    message2 = 'Friday';
+    message_2 = 'Friday';
     break;
   case 6:
-    message2 = 'Saturday';
+    message_2 = 'Saturday';
     break;
 }
 
 /* OUTPUT */
 
-// Step 1: Assign the value of the first message variable to the HTML element with an ID of message1
-let message1Element = document.getElementById('message1');
-message1Element.textContent = message1;
+// Step 1: Assign the value of the first message variable to the HTML element with an ID of message_1
+let message_1Element = document.getElementById('message_1');
+message_1Element.textContent = message_1;
 
-// Step 2: Assign the value of the second message variable to the HTML element with an ID of message2
-let message2Element = document.getElementById('message2');
-message2Element.textContent = message2;
+// Step 2: Assign the value of the second message variable to the HTML element with an ID of message_2
+let message_2Element = document.getElementById('message_2');
+message_2Element.textContent = message_2;
 
 /* FETCH */
 // Step 1: Declare a global empty array variable to store a list of temples
@@ -119,28 +119,32 @@ function reset() {
 function sortBy() {
   // - Calls the reset function
   reset();
+
   // - Sorts the global temple list by the currently selected value of the HTML element with an ID of sortBy
   if (document.getElementById('sortBy').value === 'templeNameDescending') {
     templeList.sort((a, b) => {
-      if (a.templeName > b.templeName) {
-        return -1;
-      }
-      if (a.templeName > b.templeName) {
+      if (a.templeName < b.templeName) {
         return 1;
+      } else if (a.templeName > b.templeName) {
+        return -1;
+      } else {
+        return 0;
       }
-      return 0;
     });
-  } else {
+  } else if (
+    document.getElementById('sortBy').value === 'templeNameAscending'
+  ) {
     templeList.sort((a, b) => {
       if (a.templeName < b.templeName) {
         return -1;
-      }
-      if (a.templeName > b.templeName) {
+      } else if (a.templeName > b.templeName) {
         return 1;
+      } else {
+        return 0;
       }
-      return 0;
     });
   }
+
   // - Calls the output function passing in the sorted list of temples
   output(templeList);
 }
