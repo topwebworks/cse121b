@@ -37,16 +37,16 @@ SORT
 Each joke list will randomly sort the data so each list is shown in a random order.
 
 DOM
-Create html elements for each joke in the jokeList object array. H2, H4, H5, Article. Place in joke totals and current day. Event listener for filtered dropdown list.
+Create html elements for each joke in the jokeList object array. H2, H4, H5, Article. Place in joke totals and random adjectives. Event listener for filtered dropdown list.
 
-CONDITIONALS
-If/Else - for dropdown joke type filter
+CONDITIONAL
+If/Else - for dropdown joke type filter and selected type value.
 
 FUNCTIONS
 output() - Create html elements for each joke in the all jokes or filtered jokes object array
 getJokes() - Fetch and output all jokes from the jokes.json file. Call joke totals
 jokeType() - Reset and filter the jokes by type. Output selected list. Call joke list totals
-jokeTotals() - Get joke totals and selected value condition from jokeType function.
+jokeTotals() - Get joke totals and selected value condition from jokeType function
 reset() - Reset joke list html. Called by jokeType filter function
 
 
