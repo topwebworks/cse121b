@@ -70,13 +70,15 @@ function output(jokes) {
 
 //  Fetch and output all jokes from the jokes.json file. Call joke totals
 async function getJokes() {
-  let response = await fetch('./data/jokes.json');
+  // Test local file
+  // let response = await fetch('./data/jokes.json');
+  let response = await fetch(
+    'https://topwebworks.github.io/cse121b/week06_bretts/data/jokes.json'
+  );
   let data = await response.json();
   jokeList = data;
   jokeList.sort(() => Math.random() - 0.5);
   jokeTotals(jokeList);
-  // Test array of objects in console
-  // console.log(jokeList);
   output(jokeList);
 }
 
